@@ -22,9 +22,14 @@ export const useThreeScene = () => {
     camera.position.z = 10
 
     // Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true })
+    const renderer = new THREE.WebGLRenderer({
+      antialias: true,
+      alpha: true
+    })
     renderer.setSize(window.innerWidth, window.innerHeight)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
     renderer.domElement.style.display = 'block'
+    renderer.domElement.style.touchAction = 'none'
     containerRef.current.appendChild(renderer.domElement)
 
     // Lighting
@@ -66,33 +71,29 @@ export const useThreeScene = () => {
     const mouse = new THREE.Vector2(-999, -999)
     let hoveredBook = null
 
-    // Mouse move handler
+    // Mouse move handler - only raycast when mouse moves
     const handleMouseMove = (event) => {
       const rect = renderer.domElement.getBoundingClientRect()
       mouse.x = ((event.clientX - rect.left) / rect.width) * 2 - 1
       mouse.y = -((event.clientY - rect.top) / rect.height) * 2 + 1
 
+      // Do raycasting immediately on mouse move
       raycaster.setFromCamera(mouse, camera)
       const intersects = raycaster.intersectObjects(books)
 
       if (intersects.length > 0) {
         const newHoveredBook = intersects[0].object
         if (hoveredBook !== newHoveredBook) {
-          // Reset previous hovered book
           if (hoveredBook) {
             hoveredBook.userData.targetZ = hoveredBook.userData.defaultZ
           }
-          // Set new hovered book
           hoveredBook = newHoveredBook
-          hoveredBook.userData.targetZ = 2
-          renderer.domElement.style.cursor = 'pointer'
+          hoveredBook.userData.targetZ = 1
         }
       } else {
-        // No book hovered
         if (hoveredBook) {
           hoveredBook.userData.targetZ = hoveredBook.userData.defaultZ
           hoveredBook = null
-          renderer.domElement.style.cursor = 'default'
         }
       }
     }
@@ -101,7 +102,6 @@ export const useThreeScene = () => {
     const handleWheel = (event) => {
       event.preventDefault()
       camera.position.x += event.deltaY * 0.01
-      // Clamp camera position
       const maxScroll = (booksData.length * spacing) / 2
       camera.position.x = Math.max(-maxScroll, Math.min(maxScroll, camera.position.x))
     }
@@ -134,8 +134,8 @@ export const useThreeScene = () => {
     // Cleanup
     return () => {
       window.removeEventListener('resize', handleResize)
-      renderer.domElement.removeEventListener('wheel', handleWheel)
-      renderer.domElement.removeEventListener('mousemove', handleMouseMove)
+      window.removeEventListener('wheel', handleWheel)
+      window.removeEventListener('mousemove', handleMouseMove)
       if (containerRef.current && renderer.domElement.parentNode === containerRef.current) {
         containerRef.current.removeChild(renderer.domElement)
       }
