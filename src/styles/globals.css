@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 * {
   margin: 0;
@@ -14,46 +12,62 @@ html {
 
 body {
   font-family: 'Crimson Pro', serif;
-  background: linear-gradient(135deg, #e8f0f0 0%, #d4e8e8 50%, #c5dce0 100%);
-  color: #2c3e50;
+  background: #0B2B26;
+  color: #1a3a2e;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Typography */
+/* Typography - Distinctive and Editorial */
 h1, h2, h3 {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #1a3a2e;
 }
 
 h1 {
   font-size: 3.5rem;
   line-height: 1.1;
+  font-weight: 700;
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 1.2;
+  margin-bottom: 0.5rem;
 }
 
 h3 {
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
 p {
   line-height: 1.8;
   font-size: 1.1rem;
+  color: #2c4c3f;
 }
 
-/* Remove default focus outline for mouse users */
+blockquote {
+  font-style: italic;
+  color: #3d6b4f;
+}
+
+/* Interactive focus states */
 *:focus-visible {
   outline: 2px solid #3d6b4f;
+  outline-offset: 3px;
+}
+
+button:focus-visible {
+  outline: 2px solid #c9a961;
   outline-offset: 2px;
 }
 
-/* Smooth scrollbar */
+/* Smooth scrollbar with forest aesthetic */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
 ::-webkit-scrollbar-track {
@@ -61,15 +75,37 @@ p {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8b9b8f;
+  background: linear-gradient(180deg, #8b9b8f 0%, #5a7f70 100%);
   border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d6b4f;
+  background: linear-gradient(180deg, #6b7b6f 0%, #3d6b4f 100%);
+  background-clip: padding-box;
 }
 
 /* Canvas sizing */
 canvas {
   display: block;
+}
+
+/* Subtle grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' result='noise' /%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Smooth transitions */
+button, a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }

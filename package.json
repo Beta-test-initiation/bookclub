@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Beta-test-initiation/bookclub#readme",
   "dependencies": {
+    "@tailwindcss/postcss": "^4.1.17",
     "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.22",
     "gsap": "^3.13.0",
