@@ -4,6 +4,7 @@
     "title": "The Wind Rises",
     "author": "Hayao Miyazaki",
     "coverColor": "#c9a961",
+    "texture": "linen",
     "remarks": "A beautiful exploration of dreams, ambition, and the tragic weight of human creation. The film follows Jiro, a talented aircraft designer, as he pursues his passion while the world around him spirals into darkness. What struck me most was how Miyazaki balanced the wonder of innovation with the sobering reality of its consequences. The animation is breathtaking, and the love story woven throughout adds such emotional depth.",
     "quotes": [
       "\"A person is not something to be pitied because they pursue their dreams.\"",
@@ -15,6 +16,7 @@
     "title": "Spirited Away",
     "author": "Hayao Miyazaki",
     "coverColor": "#8b4c4a",
+    "texture": "velvet",
     "remarks": "Every time I watch this, I discover something new. The world-building is absolutely masterful—the spirit world feels lived-in and real despite its magical nature. Chihiro's journey from a spoiled child to someone resourceful and kind is so satisfying to follow. The themes of greed, identity, and finding your true name are layered in ways that work for both children and adults.",
     "quotes": [
       "\"Always believe in yourself. Do this and no matter where you are, you will have nothing to fear.\"",
@@ -26,6 +28,7 @@
     "title": "Howl's Moving Castle",
     "author": "Diana Wynne Jones",
     "coverColor": "#3d5a73",
+    "texture": "fabric",
     "remarks": "Sophie's transformation from resigned to confident is one of my favorite character arcs in fantasy literature. The magic system feels organic, and the way Jones layers humor, romance, and genuine stakes kept me reading late into the night. Howl is such a perfectly flawed character—vain yet capable of real growth. The relationship between Sophie and Howl develops so naturally.",
     "quotes": [
       "\"And that is how you will come to pass on all the time that is left to you.\"",
@@ -37,6 +40,7 @@
     "title": "1984",
     "author": "George Orwell",
     "coverColor": "#1a1a1a",
+    "texture": "leather",
     "remarks": "Unsettling, prescient, and genuinely difficult to read in places. Orwell's vision of total surveillance and thought control feels terrifyingly relevant. What makes it so powerful isn't just the dystopian elements but the intimate tragedy of Winston's story. The ending still haunts me. It's a book that makes you think about language, power, and what we accept as truth.",
     "quotes": [
       "\"War is peace. Freedom is slavery. Ignorance is strength.\"",
@@ -48,6 +52,7 @@
     "title": "Piranesi",
     "author": "Susanna Clarke",
     "coverColor": "#2e5a4f",
+    "texture": "canvas",
     "remarks": "A mysterious, haunting masterpiece. The repeated descriptions of the House create this hypnotic rhythm that mirrors the protagonist's confusion and fragmented memories. As the truth gradually unfolds, the entire narrative recontextualizes itself. Clarke's prose is elegant without being purple, and the worldbuilding is some of the most creative I've encountered. Perfect for rereading.",
     "quotes": [
       "\"The beauty of the House is immeasurable; its kindness infinite.\"",
@@ -59,6 +64,7 @@
     "title": "Educated",
     "author": "Tara Westover",
     "coverColor": "#d4a574",
+    "texture": "paper",
     "remarks": "This memoir is gripping and deeply moving. Tara's journey from a survivalist compound to Cambridge University is extraordinary, but what makes it special is her honesty about the complexity of her feelings toward her family. It's not a simple story of good vs. evil but rather a nuanced exploration of trauma, identity, and the transformative power of education. Her reflection is mature and thoughtful.",
     "quotes": [
       "\"You can love someone and still choose to say goodbye to them.\"",
@@ -70,6 +76,7 @@
     "title": "The Midnight Library",
     "author": "Matt Haig",
     "coverColor": "#4a6fa5",
+    "texture": "glossy",
     "remarks": "A contemplative and ultimately life-affirming novel about regret, possibilities, and self-acceptance. Nora's journey through infinite versions of her life made me reflect on my own choices and what I might be missing by dwelling on what-ifs. Haig explores profound themes—purpose, meaning, connection—without feeling heavy-handed. It's a book that whispers rather than shouts, but the message is deeply moving.",
     "quotes": [
       "\"The only thing I want is to want less.\"",
@@ -81,6 +88,7 @@
     "title": "Project Hail Mary",
     "author": "Andy Weir",
     "coverColor": "#c4734e",
+    "texture": "rough",
     "remarks": "An absolute blast to read. Ryland Grace's problem-solving ingenuity and humor in the face of impossible odds kept me entertained throughout. What I appreciated beyond the science and adventure was the genuine emotional core—his relationship with his AI companion and the touching resolution. Weir balances scientific detail with accessibility, making complex concepts engaging without requiring a PhD to understand.",
     "quotes": [
       "\"I'm a very good liar when I need to be. Very convincing.\"",
@@ -92,6 +100,7 @@
     "title": "Jade City",
     "author": "Fonda Lee",
     "coverColor": "#3d7a4f",
+    "texture": "canvas",
     "remarks": "An incredible found-family story wrapped in Asian-inspired fantasy worldbuilding. The Kaul family dynamics feel real—the loyalty mixed with conflict, the burden of legacy, the drive to protect those you love. Lee's magic system tied to jade is creative, but what really captivated me was watching Jade struggle with leadership and identity. The action sequences are visceral, and the emotional moments land hard.",
     "quotes": [
       "\"Jade is not your limitation. It is your responsibility.\"",
@@ -103,6 +112,7 @@
     "title": "The Three-Body Problem",
     "author": "Liu Cixin",
     "coverColor": "#1d2a3a",
+    "texture": "leather",
     "remarks": "Mind-bending and ambitious in scope. Liu presents humanity's first contact with an alien civilization, but more interestingly, he explores the philosophical and ethical quandaries this raises. The Cultural Revolution backdrop adds historical weight, and the way he connects past trauma to future consequences is profound. It requires patience and intellectual engagement, but the payoff is extraordinary. A book that will stay with me.",
     "quotes": [
       "\"We are the universe. The universe is us.\"",
@@ -114,6 +124,7 @@
     "title": "The Three-Body Problem",
     "author": "Liu Cixin",
     "coverColor": "#1d2a3a",
+    "texture": "glossy",
     "remarks": "Mind-bending and ambitious in scope. Liu presents humanity's first contact with an alien civilization, but more interestingly, he explores the philosophical and ethical quandaries this raises. The Cultural Revolution backdrop adds historical weight, and the way he connects past trauma to future consequences is profound. It requires patience and intellectual engagement, but the payoff is extraordinary. A book that will stay with me.",
     "quotes": [
       "\"We are the universe. The universe is us.\"",
@@ -121,10 +132,11 @@
     ]
   },
   {
-    "id": 10,
+    "id": 12,
     "title": "The Three-Body Problem",
     "author": "Liu Cixin",
     "coverColor": "#1d2a3a",
+    "texture": "velvet",
     "remarks": "Mind-bending and ambitious in scope. Liu presents humanity's first contact with an alien civilization, but more interestingly, he explores the philosophical and ethical quandaries this raises. The Cultural Revolution backdrop adds historical weight, and the way he connects past trauma to future consequences is profound. It requires patience and intellectual engagement, but the payoff is extraordinary. A book that will stay with me.",
     "quotes": [
       "\"We are the universe. The universe is us.\"",
