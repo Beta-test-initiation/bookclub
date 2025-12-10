@@ -34,7 +34,15 @@ export const BookCover = ({ title, author, color, isHovered, texture = 'fabric' 
       }}
     >
       {/* Book title and author on cover */}
-      <div className="absolute inset-0 p-5 flex flex-col justify-between z-20">
+      <div
+        className="absolute inset-0 flex flex-col justify-between z-20"
+        style={{
+          paddingTop: '20px',
+          paddingRight: '20px',
+          paddingBottom: '20px',
+          paddingLeft: '32px' // Extra padding on left to clear the binding indentation
+        }}
+      >
         <div>
           <h3
             className="font-bold leading-[1.15] mb-3 tracking-tight"
@@ -69,12 +77,24 @@ export const BookCover = ({ title, author, color, isHovered, texture = 'fabric' 
         style={textureStyle}
       />
 
-      {/* Subtle edge shadow for depth */}
+      {/* Binding indentation - the groove along the spine edge */}
       <div
-        className="absolute top-0 left-0 bottom-0 w-1 z-[5]"
+        className="absolute top-0 bottom-0 z-[12]"
         style={{
-          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.2), transparent)',
-          opacity: 0.4
+          left: '12px',
+          width: '10px',
+          background: 'linear-gradient(to right, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.3) 30%, rgba(0, 0, 0, 0.1) 60%, transparent 100%)',
+          boxShadow: 'inset 3px 0 4px rgba(0, 0, 0, 0.35)'
+        }}
+      />
+
+      {/* Subtle highlight on the binding edge */}
+      <div
+        className="absolute top-0 bottom-0 z-[13]"
+        style={{
+          left: '21px',
+          width: '1.5px',
+          background: 'linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.12) 15%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.12) 85%, transparent 100%)'
         }}
       />
     </div>
