@@ -10,7 +10,7 @@ export const BookShelf2D = ({ onBookSelect }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null)
 
   return (
-    <div className="w-full h-screen flex items-center justify-center bg-[#0B2B26] overflow-hidden">
+    <div className="w-full h-screen flex items-center justify-center bg-[#E60023] overflow-hidden">
       {/* Horizontal container for books */}
       <div className="flex gap-5 items-center justify-center">
         {booksData.map((book, index) => (
